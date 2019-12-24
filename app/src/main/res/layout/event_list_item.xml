@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="0dp"
+            android:contentDescription="@string/event_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Event name"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_image" />
+        <TextView
+            android:id="@+id/date_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_name" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Date"
+            app:layout_constraintBottom_toBottomOf="@id/date_heading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/date_heading"
+            app:layout_constraintTop_toTopOf="@id/date_heading" />
+        <TextView
+            android:id="@+id/venue_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/venue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_heading" />
+
+        <TextView
+            android:id="@+id/venue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/venue"
+            app:layout_constraintBottom_toBottomOf="@id/venue_heading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/venue_heading"
+            app:layout_constraintTop_toTopOf="@id/venue_heading" />
+
+        <TextView
+            android:id="@+id/event_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Me "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/venue_heading"
+            app:layout_constraintTop_toBottomOf="@id/venue_heading" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
