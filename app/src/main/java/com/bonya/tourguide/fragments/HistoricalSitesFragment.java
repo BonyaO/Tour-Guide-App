@@ -38,18 +38,18 @@ public class HistoricalSitesFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_historical_sites, container, false);
         sitesRecyclerView = rootView.findViewById(R.id.sites_rec_view);
 
-        mSites.add(new HistoricalSite("Lake Oku", getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
-        mSites.add(new HistoricalSite("Mankon Palace", getResources().getString(R.string.lake_oku_details),R.drawable.mankon));
-        mSites.add(new HistoricalSite("Lake Oku", getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
-        mSites.add(new HistoricalSite("Lake Oku", getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
-        mSites.add(new HistoricalSite("Lake Oku", getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
-        mSites.add(new HistoricalSite("Lake Oku", getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
+        mSites.add(new HistoricalSite(getString(R.string.lake_oku), getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
+        mSites.add(new HistoricalSite(getString(R.string.mankon_palace), getResources().getString(R.string.lake_oku_details),R.drawable.mankon));
+        mSites.add(new HistoricalSite(getString(R.string.lake_oku), getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
+        mSites.add(new HistoricalSite(getString(R.string.lake_oku), getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
+        mSites.add(new HistoricalSite(getString(R.string.lake_oku), getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
+        mSites.add(new HistoricalSite(getString(R.string.lake_oku), getResources().getString(R.string.lake_oku_details),R.drawable.lake_oku));
 
 
         HistoricalSiteAdapter adapter = new HistoricalSiteAdapter(mSites, new HistoricalSiteAdapter.OnItemClickedListener() {
             @Override
             public void onItemClicked(HistoricalSite site) {
-                Toast.makeText(getContext(), "Item clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.item_clicked, Toast.LENGTH_SHORT).show();
 
             }
         });

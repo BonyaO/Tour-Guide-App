@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
         //Setup all the tabs in the tablayout here
         TabLayout tabLayout = findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Hotels"));
-        tabLayout.addTab(tabLayout.newTab().setText("Restaurants"));
-        tabLayout.addTab(tabLayout.newTab().setText("Historical sites"));
-        tabLayout.addTab(tabLayout.newTab().setText("Events"));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.hotels)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.restaurants)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.historical_sites)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.events)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         // Each page is represented by its own fragment.
         final ViewPager viewPager = findViewById(R.id.pager);

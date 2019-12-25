@@ -40,18 +40,18 @@ public class HotelsFragment extends Fragment {
 
         hotelsRecyclerView = rootView.findViewById(R.id.hotels_rec_view);
 
-        mHotels.add(new Establishment("Mawa Hotel", "Mile 6 Nkwen",2, 4, R.drawable.mawa_hotel));
-        mHotels.add(new Establishment("Azam Hotel", "Mankon",3, 5, R.drawable.azam_hotel));
-        mHotels.add(new Establishment("Blue Pearl Hotel", "Mile 3 Nkwen",3, 7, R.drawable.blue_pear_hotel));
-        mHotels.add(new Establishment("Kangle Plaza Hotel", "Foncha Street",2, 5, R.drawable.kangle_plaza_hotel));
-        mHotels.add(new Establishment("Top Star Hotel", "Ghana Street",2, 3, R.drawable.top_star_hotel));
-        mHotels.add(new Establishment("Ayaba Hotel", "Old Town",3, 8, R.drawable.ayaba_hotel));
-        mHotels.add(new Establishment("Saddle Hill Ranch", "Bafut",3, 8, R.drawable.saddle_hill_ranch));
+        mHotels.add(new Establishment(getString(R.string.mawa_hotel), getString(R.string.mile_6_nkwen),2, 4, R.drawable.mawa_hotel));
+        mHotels.add(new Establishment(getString(R.string.azam_hotel), getString(R.string.mankon),3, 5, R.drawable.azam_hotel));
+        mHotels.add(new Establishment(getString(R.string.blue_pearl_hotel), getString(R.string.mile_3_nkwen),3, 7, R.drawable.blue_pear_hotel));
+        mHotels.add(new Establishment(getString(R.string.kangle_plaza_hotel), getString(R.string.foncha_street),2, 5, R.drawable.kangle_plaza_hotel));
+        mHotels.add(new Establishment(getString(R.string.top_star_hotel), getString(R.string.ghana_street),2, 3, R.drawable.top_star_hotel));
+        mHotels.add(new Establishment(getString(R.string.ayaba_hotel), getString(R.string.old_town),3, 8, R.drawable.ayaba_hotel));
+        mHotels.add(new Establishment(getString(R.string.saddle_hill_ranch), getString(R.string.bafut),3, 8, R.drawable.saddle_hill_ranch));
 
         HotelAdapter myHotelAdapter = new HotelAdapter(mHotels, new HotelAdapter.OnItemClickedListener() {
             @Override
             public void onItemClicked(Establishment hotel) {
-                Toast.makeText(getContext(), "item clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.item_clicked, Toast.LENGTH_SHORT).show();
             }
         });
         LinearLayoutManager manager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);

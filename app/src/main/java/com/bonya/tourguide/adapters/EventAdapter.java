@@ -17,7 +17,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 /**
- * A Custom Adapter to efficiently display a liist of events in a RecyclerView
+ * A Custom Adapter to efficiently display a list of events in a RecyclerView
  *
  * */
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {

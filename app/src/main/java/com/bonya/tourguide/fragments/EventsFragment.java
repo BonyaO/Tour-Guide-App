@@ -39,13 +39,13 @@ public class EventsFragment extends Fragment {
 
         eventsRecyclerView = rootView.findViewById(R.id.events_rec_view);
 
-        mEvents.add(new Event("Babanki Cultural Week", "27/12/2019", "The people of Babanki showcase their culture", "Kijem Keku", R.drawable.babanki));
-        mEvents.add(new Event("Enthronement of Fon of Kom", "04/01/2020", "Following the passing of his father, HRH Bia James take the throne", "Kom", R.drawable.kom));
+        mEvents.add(new Event(getString(R.string.babanki_cultural_week), getString(R.string.babanki_date), getString(R.string.babanki_details), getString(R.string.babanki_venue), R.drawable.babanki));
+        mEvents.add(new Event(getString(R.string.fon_of_kom), getString(R.string.kom_date), getString(R.string.kom_details), getString(R.string.kom_venue), R.drawable.kom));
 
         EventAdapter adapter = new EventAdapter(mEvents, new EventAdapter.OnItemClickedListener() {
             @Override
             public void onItemClicked(Event event) {
-                Toast.makeText(getContext(), "Item Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.item_clicked, Toast.LENGTH_SHORT).show();
             }
         });
         LinearLayoutManager manager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
